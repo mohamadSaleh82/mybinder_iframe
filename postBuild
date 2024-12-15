@@ -1,7 +1,7 @@
 #!/bin/bash
-# ایجاد مسیر دایرکتوری اگر وجود ندارد
-mkdir -p ~/.jupyter
+# تولید فایل پیکربندی Jupyter
+jupyter notebook --generate-config
 
-# افزودن تنظیمات به فایل کانفیگ
+# افزودن تنظیمات به فایل پیکربندی
 echo "c.NotebookApp.allow_origin = '*'" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.disable_check_xsrf = True" >> ~/.jupyter/jupyter_notebook_config.py
